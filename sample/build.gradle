@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+       flatDir {
+           dirs '../plugin/repos'
+       }
+	   mavenCentral()
+    }
+	dependencies { 
+		classpath( 
+			'org.gradle.cloudbees:plugin:1.0', 
+			'com.cloudbees:cloudbees-api-client:1.2.0'
+		)
+	}
+}
+
+apply plugin: 'war'
+apply plugin: 'cloudbees'
+
+cloudbees {
+	apiKey = '65728CB63EA87A3F'
+	secret = 'TP7DNSJTILEHJ9QQVMLYZ0AI/FTD7EXFRU2YYQ6TUUG='
+	appId = 'aleksz/gradle-plugin-test'
+}
