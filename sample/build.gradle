@@ -1,12 +1,11 @@
 buildscript {
 	repositories {
-		maven { url uri('../repos') }
+		maven { url 'https://repository-gradle-cloudbees-plugin.forge.cloudbees.com/snapshot' }
 		mavenCentral()
 	}
 	dependencies {
 		classpath(
-				'org.gradle:gradle-cloudbees-plugin:1.0',
-				'com.cloudbees:cloudbees-api-client:1.2.0'
+				'org.gradle:gradle-cloudbees-plugin:1.0-SNAPSHOT'
 				)
 	}
 }

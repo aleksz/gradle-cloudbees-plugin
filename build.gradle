@@ -1,8 +1,14 @@
-version = '1.0'
+version = '1.0-SNAPSHOT'
 group = 'org.gradle'
 
 apply plugin: 'eclipse'
 apply plugin: 'groovy'
+apply plugin: 'maven'
+
+configurations {
+	deployerJars
+}
+
 
 repositories { mavenCentral() }
 
@@ -13,11 +19,21 @@ dependencies {
 			)
 
 	groovy localGroovy()
+	
+	deployerJars(
+			"org.apache.maven.wagon:wagon-webdav:1.0-beta-2"
+			)
 }
 
 uploadArchives {
-	repositories {
-		maven { url uri('repos') }
+	repositories.mavenDeployer {
+		configuration = configurations.deployerJars
+		repository(url: "dav:https://repository-gradle-cloudbees-plugin.forge.cloudbees.com/release") {
+			authentication(userName: "gradle-cloudbees-plugin", password: "iT722vWO")
+		}
+		snapshotRepository(url: "dav:https://repository-gradle-cloudbees-plugin.forge.cloudbees.com/snapshot") {
+			authentication(userName: "gradle-cloudbees-plugin", password: "iT722vWO")
+		}
 	}
 }
 
