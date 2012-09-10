@@ -1,0 +1,1 @@
+[![CloudBees](http://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png)](https://gradle-cloudbees-plugin.ci.cloudbees.com/)
