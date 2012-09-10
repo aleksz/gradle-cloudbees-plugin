@@ -1,7 +1,7 @@
 apply plugin: 'eclipse'
 apply plugin: 'groovy'
 apply plugin: 'maven'
-apply from: "https://launchpad.net/gradle-release/trunk/latest/+download/apply.groovy"
+apply from: 'https://launchpad.net/gradle-release/trunk/0.9pre/+download/apply.groovy'
 
 configurations {
 	deployerJars
