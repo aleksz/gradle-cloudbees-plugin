@@ -34,3 +34,4 @@ uploadArchives {
 	}
 }
 
+createReleaseTag.dependsOn uploadArchives
