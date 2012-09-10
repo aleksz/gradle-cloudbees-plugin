@@ -3,7 +3,8 @@
 
 Usage:
 
-```buildscript {
+```
+buildscript {
 	repositories {
 		maven { url 'https://repository-gradle-cloudbees-plugin.forge.cloudbees.com/release' }
 		mavenCentral()
@@ -21,4 +22,5 @@ cloudbees {
 	apiKey = 'A9B1930BE39758C6'
 	secret = '2HBOOTVQ3VADNVOKVD1NLKZMQRY8MKIQ7743NQTLQBO='
 	appId = 'gradle-cloudbees-plugin/sample'
-}```
+}
+```
