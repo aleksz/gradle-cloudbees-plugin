@@ -1,7 +1,17 @@
 apply plugin: 'eclipse'
 apply plugin: 'groovy'
 apply plugin: 'maven'
-apply from: "https://launchpad.net/gradle-release/trunk/latest/+download/apply.groovy"
+apply plugin: 'gitrelease'
+
+buildscript {
+	repositories {
+	  mavenCentral()
+	}
+  
+	dependencies {
+	  classpath group: 'no.entitas.gradle', name: 'gradle-release-plugin', version: '1.14'
+	}
+  }
 
 configurations {
 	deployerJars
@@ -33,5 +43,3 @@ uploadArchives {
 		}
 	}
 }
-
-createReleaseTag.dependsOn uploadArchives
