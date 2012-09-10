@@ -1,18 +1,17 @@
 buildscript {
-    repositories {
-       flatDir {
-           dirs '../plugin/repos'
-       }
-	   mavenCentral()
-    }
-	dependencies { 
-		classpath( 
-			'org.gradle.cloudbees:plugin:1.0', 
-			'com.cloudbees:cloudbees-api-client:1.2.0'
+	repositories {
+		maven { url uri('../repos') }
+		mavenCentral()
+	}
+	dependencies {
+		classpath(
+				'org.gradle:gradle-cloudbees-plugin:1.0', 
+				'com.cloudbees:cloudbees-api-client:1.2.0'
 		)
 	}
 }
 
+apply plugin: 'eclipse'
 apply plugin: 'war'
 apply plugin: 'cloudbees'
 

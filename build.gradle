@@ -1,8 +1,26 @@
-subprojects {
+
 
 	version = '1.0'
+	group = 'org.gradle'
 
 	apply plugin: 'eclipse'
 
 	repositories { mavenCentral() }
+
+apply plugin: 'groovy'
+
+dependencies {
+        compile(
+                'com.cloudbees:cloudbees-api-client:1.2.0',
+                gradleApi()
+        )
+        
+        groovy localGroovy()
 }
+
+uploadArchives {
+        repositories {
+                maven { url uri('repos') }
+        }
+}
+
