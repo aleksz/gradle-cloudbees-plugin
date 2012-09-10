@@ -2,8 +2,8 @@
 [![CloudBees](http://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png)](https://gradle-cloudbees-plugin.ci.cloudbees.com/)
 
 Usage:
-`
-buildscript {
+
+bc. buildscript {
 	repositories {
 		maven { url 'https://repository-gradle-cloudbees-plugin.forge.cloudbees.com/release' }
 		mavenCentral()
@@ -22,4 +22,3 @@ cloudbees {
 	secret = '2HBOOTVQ3VADNVOKVD1NLKZMQRY8MKIQ7743NQTLQBO='
 	appId = 'gradle-cloudbees-plugin/sample'
 }
-`
