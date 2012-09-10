@@ -3,7 +3,7 @@
 
 Usage:
 
-bc. buildscript {
+buildscript {
 	repositories {
 		maven { url 'https://repository-gradle-cloudbees-plugin.forge.cloudbees.com/release' }
 		mavenCentral()
