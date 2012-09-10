@@ -1,14 +1,11 @@
-version = '1.0-SNAPSHOT'
-group = 'org.gradle'
-
 apply plugin: 'eclipse'
 apply plugin: 'groovy'
 apply plugin: 'maven'
+apply from: "https://launchpad.net/gradle-release/trunk/latest/+download/apply.groovy"
 
 configurations {
 	deployerJars
 }
-
 
 repositories { mavenCentral() }
 
